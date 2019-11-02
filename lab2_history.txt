@@ -1,14 +1,1 @@
-  192  mkdir test
-  193  test
-  194  history
-  195  rm -fr test
-  196  su
-  197  cat test/file
-  198  su
-  199  cat test/file
-  200  su
-  201  cat test/file
-  202  ls -lR
-  203  ls -lR |  > lab1_history.txt
-  204  ls -lR |  > lab2_result.txt
-  205  history > lab2_history.txt
+К сожалению, история по ошибке удалена, но лаба сделана!
