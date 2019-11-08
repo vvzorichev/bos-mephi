@@ -36,8 +36,10 @@ find / -type f -empty -delete
 sudo find / -type f -links '+0'
 
     Найдите файлы и каталоги в каталоге /etc, не принадлежащие пользователю root.
+ls -l /etc | grep -v root | tr -s ' ' '\t' | cut -f9 | grep -v "^$"
 
     Найдите все файлы (и только файлы), у которых нет расширения sh.
+sudo find / -type f | grep -v ".sh" | less
 
     Найдите все файлы (и только файлы), у которых количество жёстких ссылок более двух.
 sudo find / -type f -links '+2'
