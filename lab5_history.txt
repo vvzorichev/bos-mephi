@@ -1,0 +1,270 @@
+  728  ps -e
+  729  ps -ef
+  730  ps -eF
+  731  ps -ely
+  732  ps ax
+  733  ps axu
+  734  ps -ejH
+  735  ps axjf
+  736  ps -eLf
+  737  ps axms
+  738  ps -eo euser,ruser,suser,fuser,f,comm,label
+  739  ps axZ
+  740  ps -eM
+  741  ps -U root -u root u
+  742  ps -eo pid,tid,class,rtprio,ni,pri,psr,pcpu,stat,wchan:14,comm
+  743  ps axo stat,euid,ruid,tty,tpgid,sess,pgrp,ppid,pid,pcpu,comm
+  744  ps -Ao pid,tt,user,fname,tmout,f,wchan
+  745  ps -C systemd -o pid=
+  746  ps -q номер -o comm=
+  747  ps -q 1 -o comm=
+  748  ps -q 2 -o comm=
+  749  ps -q 3 -o comm=
+  750  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done )
+  751  tail -f ~/test.out
+  752  trap 'echo Завершение работы...; sleep 2' EXIT
+  753  trap -p EXIT
+  754  ps -e
+  755  ps -ef
+  756  ps -eF
+  757  ps -ely
+  758  ps ax
+  759  ps axu
+  760  ps -ejH
+  761  ps axjf
+  762  ps -eLf
+  763  ps axms
+  764  ps -eo euser,ruser,suser,fuser,f,comm,label
+  765  ps axZ
+  766  ps -eM
+  767  ps -U root -u root u
+  768  ps -eo pid,tid,class,rtprio,ni,pri,psr,pcpu,stat,wchan:14,comm
+  769  ps axo stat,euid,ruid,tty,tpgid,sess,pgrp,ppid,pid,pcpu,comm
+  770  ps -Ao pid,tt,user,fname,tmout,f,wchan
+  771  ps -C systemd -o pid=
+  772  ps -q номер -o comm=
+  773  ps -q 1 -o comm=
+  774  ps -q 2 -o comm=
+  775  ps -q 3 -o comm=
+  776  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done )
+  777  jobs
+  778  ps j
+  779  bg
+  780  jobs
+  781  ps j
+  782  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done )&
+  783  jobs
+  784  fg 1
+  785  fg 2
+  786  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done ) &
+  787  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done ) &
+  788  jobs
+  789  ps j
+  790  kill -SIGSTOP %1
+  791  jobs
+  792  ps j
+  793  kill -SIGTERM %2
+  794  jobs
+  795  ps j
+  796  fg
+  797  sh
+  798  touch test-trap.sh
+  799  vim test-trap.sh
+  800  chmod +x test-trap.sh
+  801  ./test-trap.sh
+  802  cat /proc/version
+  803  uname -a
+  804  cat /proc/meminfo
+  805  cat /sys/devices/system/node/node0/meminfo
+  806  free
+  807  cat /proc/cpuinfo
+  808  cat /proc/uptime
+  809  uptime
+  810  echo $$
+  811  ls -l /proc/self
+  812  ls -ld /proc/$$
+  813  read pid tcomm state other < /proc/$$/stat
+  814  echo "Процесс $pid $tcomm находится в состоянии $state"
+  815  cat /proc/$$/stat
+  816  ls -l /dev/std*
+  817  ls -l /dev/fd/
+  818  ls -l /proc/self/fd
+  819  ls -l /dev/fd/
+  820  ls -l /proc/self/fd
+  821  ls -l /dev/fd/
+  822  ( cat | head ) > ~/test.out 2> ~/test.err
+  823  ps -e
+  824  ps -ef
+  825  ps -eF
+  826  ps -ely
+  827  ps ax
+  828  ps axu
+  829  ps -ejH
+  830  ps axjf
+  831  ps -eLf
+  832  ps axms
+  833  ps -eo euser,ruser,suser,fuser,f,comm,label
+  834  ps axZ
+  835  ps -eM
+  836  ps -U root -u root u
+  837  ps -eo pid,tid,class,rtprio,ni,pri,psr,pcpu,stat,wchan:14,comm
+  838  ps axo stat,euid,ruid,tty,tpgid,sess,pgrp,ppid,pid,pcpu,comm
+  839  ps -Ao pid,tt,user,fname,tmout,f,wchan
+  840  ps -C systemd -o pid=
+  841  ps -q номер -o comm=
+  842  ps -q 1 -o comm=
+  843  ps -q 2 -o comm=
+  844  ps -q 3 -o comm=
+  845  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done )
+  846  jobs
+  847  ps j
+  848  bg
+  849  jobs
+  850  ps j
+  851  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done )&
+  852  jobs
+  853  fg 1
+  854  fg 2
+  855  ( while true; do printf "AAA %d " $$ >> ~/test.out; sleep 1; done ) &
+  856  ( while true; do printf "UUU %d " $$ >> ~/test.out; sleep 1; done ) &
+  857  jobs
+  858  ps j
+  859  kill -SIGSTOP %1
+  860  jobs
+  861  ps j
+  862  kill -SIGTERM %2
+  863  jobs
+  864  ps j
+  865  fg
+  866  sh
+  867  touch test-trap.sh
+  868  vim test-trap.sh
+  869  chmod +x test-trap.sh
+  870  ./test-trap.sh
+  871  cat /proc/version
+  872  uname -a
+  873  cat /proc/meminfo
+  874  cat /sys/devices/system/node/node0/meminfo
+  875  free
+  876  cat /proc/cpuinfo
+  877  cat /proc/uptime
+  878  uptime
+  879  echo $$
+  880  ls -l /proc/self
+  881  ls -ld /proc/$$
+  882  read pid tcomm state other < /proc/$$/stat
+  883  echo "Процесс $pid $tcomm находится в состоянии $state"
+  884  cat /proc/$$/stat
+  885  ls -l /dev/std*
+  886  ls -l /dev/fd/
+  887  ls -l /proc/self/fd
+  888  ls -l /dev/fd/
+  889  ls -l /proc/self/fd
+  890  ls -l /dev/fd/
+  891  ( cat | head ) > ~/test.out 2> ~/test.err
+  892  mkfifo ~/fifo1
+  893  cat > ~/fifo1
+  894  touch test_read.sh
+  895  vim test_read.sh
+  896  cat > ~/fifo1
+  897  vim test_read.sh
+  898  cat >
+  899  cat
+  900  cat > ~/fifo1
+  901  vim test_read.sh
+  902  cat > ~/fifo1
+  903  vim test_read.sh
+  904  cat > ~/fifo1
+  905  vim test_read.sh
+  906  cat > ~/fifo1
+  907  vim test_read.sh
+  908  cat > ~/fifo1
+  909  vim test_read.sh
+  910  ps j
+  911  ls -l /proc/7775/fd
+  912  ls -l /proc/7776/fd
+  913  $ cat < ~/fifo1
+  914  cat < ~/fifo1
+  915  bash test_read.sh
+  916  vim test_read.sh
+  917  bash test_read.sh
+  918  vim test_read.sh
+  919  ps j
+  920  ls -l /proc/13881/fd
+  921  ls -l /proc/7652/fd
+  922  ls -l /proc/7653/fd
+  923  ls -l /proc/7654/fd
+  924  cat < ~/fifo1
+  925  bash test_read.sh
+  926  vim test_read.sh
+  927  bash test_read.sh
+  928  vim test_read.sh
+  929  cat > ~/fifo1
+  930  bash test_read.sh
+  931  vim test_read.sh
+  932  bash test_read.sh
+  933  ps -l
+  934  exec ps -l
+  935  cat > ~/fifo1
+  936  bash test_read.sh
+  937  cat > ~/fifo1
+  938  cat > ~/fifo1
+  939  sh
+  940  ps -l
+  941  sh
+  942  exec 3> ~/test.out
+  943  ls -l /proc/$$/fd
+  944  echo Test
+  945  echo Test3 >&3
+  946  cat ~/test.out
+  947  echo Test333 >&3
+  948  cat ~/test.out
+  949  echo $$
+  950  ls -l /proc/8852/fdinfo/
+  951  cat /proc/3203/fdinfo/3
+  952  cat /proc/8852/fdinfo/3
+  953  exec 4< ~/test.out
+  954  ls -l /proc/$$/fd
+  955  cat ~/test.out
+  956  cat <&4
+  957  cat ~/test.out
+  958  cat <&4
+  959  echo Test4 >&3
+  960  cat ~/test.out
+  961  cat <&4
+  962  rm ~/test.out 
+  963  ls -l /proc/$$/fd
+  964  cat ~/test.out
+  965  ps axo ruid,euid
+  966  ps axo ruid,euid,cmd
+  967  ps axo ruid,euid,cmd | grep passwd
+  968  ps axo ruid,euid,cmd /bin/passwd
+  969  ps /bin/passwd
+  970  ps -e
+  971  su
+  972  touch 5.sh
+  973  vim 5.sh
+  974  ps axo ruid,euid,cmd | tr ' ' '\t'
+  975  ps axo ruid,euid,cmd
+  976  bash 5.sh (ps axo ruid,euid,cmd)
+  977  bash 5.sh 'ps axo ruid,euid,cmd'
+  978  vim 5.sh
+  979  git add *
+  980  git push -m "5"
+  981  git commit -m "5"
+  982  git push -u origin master
+  983  git push -u origins master
+  984  ps axo ruid,euid,cmd
+  985  ps axo ruid,euid,cmd | xargs -l bash 5.sh
+  986  vim 5.sh
+  987  ps axo ruid,euid,cmd | xargs -l bash 5.sh
+  988  vim 5.sh
+  989  ps axo ruid,euid,cmd | xargs -l bash 5.sh
+  990  vim 5.sh
+  991  ps axo ruid,euid,cmd | xargs -l bash 5.sh
+  992  vim 5.sh
+  993  ps axo ruid,euid,cmd | xargs -l bash 5.sh
+  994  vim 5.sh
+  995  ps axo ruid,euid,cmd | xargs -l bash 5.sh
+  996  su
+  997  history
