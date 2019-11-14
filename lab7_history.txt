@@ -1,0 +1,90 @@
+  907  ldd /bin/login |grep pam
+  908  ls -l /lib64/libpam*
+  909  ls -l /lib64/security
+  910  ls -l /lib64/security/
+  911  vi /etc/pam.d/system-auth
+  912  vi /etc/pam.d/su
+  913  su
+  914  su -c "hostname mephi"
+  915  exit
+  916  su
+  917  cd /home
+  918  cd ..
+  919  tar -ztvpf /backup/etc_pam_d_su.tar.gz
+  920  tar -zxvpf /backup/etc_pam_d_su.tar.gz
+  921  vim /etc/pam.d/su
+  922  su
+  923  sudo vim /etc/pam.d/su
+  924  su
+  925  vim securetty
+  926  su
+  927  sudo
+  928  sudo su
+  929  su
+  930  user1
+  931  su - user1
+  932  su - user3
+  933  su
+  934  passwd
+  935  su
+  936  man pam_limits
+  937  useradd -g wheel user1
+  938  sudo useradd -g wheel user1
+  939  su - user1
+  940  su
+  941  su - user1
+  942  su
+  943  su - user1
+  944  - user1
+  945  user1
+  946  su - user1
+  947  su
+  948  su - user1
+  949  su
+  950  touch check_user.c
+  951  su
+  952  su - user1
+  953  su
+  954  su - user1
+  955  su
+  956  su - user1
+  957  su
+  958  vim check_user.c
+  959  gcc check_user.c - o check_user -lpam_misc
+  960  gcc check_user.c -o check_user -lpam_misc
+  961  sudo install pam-devel
+  962  sudo yum install pam-devel
+  963  gcc check_user.c -o check_user -lpam_misc
+  964  ./check_user
+  965  gcc check_user.c -o check_user -lpam -lpam_misc
+  966  ./check_user
+  967  ./check_user Admin
+  968  ./check_user user1
+  969  ./check_user root
+  970  su
+  971  gcc check_user.c -o check_user -lpam -lpam_misc
+  972  ./check_user user1
+  973  ./check_user Admin
+  974  ./check_user root
+  975  ./check_user
+  976  su
+  977  gcc check_user.c -o check_user -lpam -lpam_misc
+  978  ./check_user root
+  979  ./check_user Admin
+  980  sudo cat /etc/pam.conf
+  981  sudo vim /etc/pam.d/check
+  982  gcc check_user.c -o check_user -lpam -lpam_misc
+  983  ./check_user Admin
+  984  ./check_user user1
+  985  ./check_user root
+  986  su
+  987  sudo vim /etc/pam.d/check
+  988  vim check_user.c
+  989  gcc check_user.c -o check_user -lpam -lpam_misc
+  990  vim check_user.c
+  991  gcc check_user.c -o check_user -lpam -lpam_misc
+  992  ./check_user Admin
+  993  ./check_user root
+  994  su
+  995  exit
+  996  history > lab7_history.txt
